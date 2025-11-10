@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  ros2_dev_env:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ros2_jazzy_dev
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./ros2_ws:/home/rosuser/ros2_ws
+      - ~/.ros:/home/rosuser/.ros
+    network_mode: "host"
+    environment:
+      - DISPLAY=${DISPLAY}
