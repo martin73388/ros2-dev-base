@@ -4,7 +4,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: ros2_jazzy_dev
     stdin_open: true
     tty: true
     volumes:
