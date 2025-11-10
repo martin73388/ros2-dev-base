@@ -1,6 +1,6 @@
-version: '3.9'
 services:
   ros2_dev_env:
+    platform: linux/arm64
     build:
       context: .
       dockerfile: Dockerfile
